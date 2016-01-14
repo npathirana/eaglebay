@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7257a87b-b8b8-40cd-839a-48ec842b6130" name="Default" comment="language testing">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eagle/commons/web/util/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/eagle/commons/web/util/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eagle/portal/web/main/security/LoginSuccessHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/eagle/portal/web/main/security/LoginSuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eagle/user/web/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/eagle/user/web/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eagle/user/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/eagle/user/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security/spring-security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security/spring-security.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+    <list default="true" id="7257a87b-b8b8-40cd-839a-48ec842b6130" name="Default" comment="module url change">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/scripts.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpringSecurityHelloWorldAnnotationExample.iws" />
@@ -124,19 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-messages_th.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/main-messages_th.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="loginpage.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main/loginpage.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,11 +128,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-security.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spring-security.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security/spring-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.581749">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.7777777">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/scripts.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.8971062">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/silverleap/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/silverleap/user/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/silverleap/commons/dao/util/NotNullOrBlankStringPropertySelector.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/silverleap/commons/dao/GenericDao.java" />
@@ -241,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/security/spring-security.xml" />
+        <option value="$PROJECT_DIR$/db/scripts.sql" />
       </list>
     </option>
   </component>
@@ -1697,6 +1688,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EagleJapanWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eagle-japan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -2135,7 +2140,7 @@
       <workItem from="1452674218828" duration="620000" />
       <workItem from="1452683102899" duration="5505000" />
       <workItem from="1452743140097" duration="2098000" />
-      <workItem from="1452763616722" duration="412000" />
+      <workItem from="1452763616722" duration="1516000" />
     </task>
     <task id="LOCAL-00001" summary="added initial sources">
       <created>1452685067456</created>
@@ -2155,11 +2160,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452688614555</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="module url change">
+      <created>1452764058153</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452764058153</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49588000" />
+    <option name="totallyTimeSpent" value="50692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -2245,7 +2256,8 @@
     <MESSAGE value="added initial sources" />
     <MESSAGE value="code cleanup" />
     <MESSAGE value="language testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="language testing" />
+    <MESSAGE value="module url change" />
+    <option name="LAST_COMMIT_MESSAGE" value="module url change" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -2269,13 +2281,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eagle/user/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eagle/user/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2667,8 +2672,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.581749">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.7777777">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/scripts.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8971062">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
