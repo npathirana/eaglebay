@@ -61,7 +61,7 @@
 
     <servlet-mapping>
         <servlet-name>spring</servlet-name>
-        <url-pattern>/cps/*</url-pattern>
+        <url-pattern>/e/*</url-pattern>
     </servlet-mapping>
 
 
@@ -70,7 +70,7 @@
     </listener>
 
     <welcome-file-list>
-        <welcome-file>cps/home</welcome-file>
+        <welcome-file>e/home</welcome-file>
     </welcome-file-list>
 
     <jsp-config>

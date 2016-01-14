@@ -10,16 +10,16 @@
 
     <http security="none" use-expressions="true" pattern="/static/**"/>
 
-    <http auto-config="true" use-expressions="true" access-denied-page="/cps/auth/denied">
+    <http auto-config="true" use-expressions="true" access-denied-page="/e/auth/denied">
 
         <session-management>
-            <concurrency-control max-sessions="5" expired-url="/cps/auth/duplicateLogin"/>
+            <concurrency-control max-sessions="5" expired-url="/e/auth/duplicateLogin"/>
         </session-management>
 
-        <intercept-url pattern="/cps/*" access="hasRole('ROLE_USER')"/>
-        <intercept-url pattern="/cps/main/*" access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/e/*" access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/e/main/*" access="hasRole('ROLE_USER')"/>
 
-        <intercept-url pattern="/cps/auth/login" access="permitAll"/>
+        <intercept-url pattern="/e/auth/login" access="permitAll"/>
 
         <headers>
             <cache-control/>
@@ -27,17 +27,17 @@
         </headers>
 
         <form-login
-                login-page="/cps/auth/login?lang=en"
-                authentication-failure-url="/cps/auth/login?error=true"
+                login-page="/e/auth/login?lang=en"
+                authentication-failure-url="/e/auth/login?error=true"
                 authentication-success-handler-ref="authenticationSuccessHandler"
-                default-target-url="/cps/home"
+                default-target-url="/e/home"
                 username-parameter="username"
                 password-parameter="password"/>
 
         <logout
                 invalidate-session="true"
-                logout-success-url="/cps/auth/login"
-                logout-url="/cps/auth/logout"/>
+                logout-success-url="/e/auth/login"
+                logout-url="/e/auth/logout"/>
 
     </http>
 

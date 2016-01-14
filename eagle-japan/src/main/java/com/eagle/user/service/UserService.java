@@ -6,9 +6,6 @@ import com.eagle.user.domain.User;
 
 import java.util.List;
 
-/**
- * Created by sylenthira on 2/24/15.
- */
 public interface UserService extends GenericService<User> {
 
     User getByEmail(String username) throws ServiceException;

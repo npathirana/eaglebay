@@ -24,11 +24,6 @@ import java.util.List;
 
 import static com.eagle.commons.web.util.Constants.REQUEST_HEADER_ACCEPT_HTML;
 
-/**
- * @author sylenthira
- *         Date: 10/13/14
- *         Time: 4:34 PM
- */
 @Controller
 @RequestMapping("/" + Constants.MODULE_NAMESPACE + "/users")
 public class UserController extends ControllerBase {

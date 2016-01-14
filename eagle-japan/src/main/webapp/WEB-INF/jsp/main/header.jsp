@@ -22,7 +22,7 @@
     <script type="text/javascript" src="<c:url value="/static/user/js/module.js"/>"></script>
 
     <script type="text/javascript">
-        loginUrl = "<c:url value="/cps/auth/login?lang=en"/>";
+        loginUrl = "<c:url value="/e/auth/login?lang=en"/>";
         <jsp:include page="labels.jsp"/>
     </script>
 </head>
@@ -31,7 +31,7 @@
 <div style="background-color: yellow; font-size: 16pt">
     ${param.pageTitle}
     <small style="float: right;">${principal.dbUser.email}
-        <a href="<c:url value="/cps/auth/logout" />"><spring:message
+        <a href="<c:url value="/e/auth/logout" />"><spring:message
                 code="label.logout"/> </a>
     </small>
 </div>
