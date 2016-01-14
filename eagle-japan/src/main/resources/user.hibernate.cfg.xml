@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+
+    <session-factory>
+        <mapping class="com.eagle.user.domain.Permission"/>
+        <mapping class="com.eagle.user.domain.Role"/>
+        <mapping class="com.eagle.user.domain.User"/>
+        <mapping class="com.eagle.user.domain.UserRole"/>
+        <mapping class="com.eagle.user.domain.UserPermission"/>
+    </session-factory>
+
+</hibernate-configuration>

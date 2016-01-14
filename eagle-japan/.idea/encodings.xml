@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/dao/GenericDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/dao/impl/GenericDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/dao/util/NotNullOrBlankStringPropertySelector.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/dao/util/Pageable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/domain/EntityBase.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/exception/DataAccessException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/exception/ServiceException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/security/Authorities.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/security/CommonAuthorities.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/security/SecurityManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/service/GenericService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/service/impl/GenericServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/util/Constants.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/util/DateUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/eagle/commons/util/GenericMessage.java" charset="UTF-8" />
+  </component>
+</project>
