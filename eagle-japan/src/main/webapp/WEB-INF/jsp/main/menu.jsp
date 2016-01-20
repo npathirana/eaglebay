@@ -4,13 +4,10 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 
-<spring:message code="label.home" var="title" scope="page"/>
-<jsp:include page="main/header.jsp">
-    <jsp:param name="pageTitle" value="${title}"/>
-</jsp:include>
-
-<div style="padding: 40px;">
-    welcome to eagle japan
+<div style="padding: 10px;">
+    menu :
+    <a href="<c:url value="${springRootUrl}/main/home/" />">Home</a>
+    <sec:authorize access="hasRole('${ROLE_USERS_LIST}')">
+        <a href="<c:url value="${springRootUrl}/user/users/" />">User list</a>
+    </sec:authorize>
 </div>
-<jsp:include page="main/menu.jsp"/>
-<jsp:include page="main/footer.jsp"/>

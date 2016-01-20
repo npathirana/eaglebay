@@ -44,13 +44,13 @@ public class UserController extends ControllerBase {
         return Constants.JSP_PATH_USERS + "home";
     }
 
-    @Secured(UserAuthorities.ROLE_USER_MODULE)
+    @Secured(UserAuthorities.ROLE_USERS_LIST)
     @RequestMapping(method = RequestMethod.GET, headers = REQUEST_HEADER_ACCEPT_HTML)
     public String list(Model model) {
         return Constants.JSP_PATH_USERS + "list";
     }
 
-    @Secured({UserAuthorities.ROLE_USER_ADD, UserAuthorities.ROLE_USER_EDIT,})
+    @Secured({UserAuthorities.ROLE_USERS_ADD, UserAuthorities.ROLE_USERS_EDIT,})
     @RequestMapping(method = RequestMethod.POST, headers = REQUEST_HEADER_ACCEPT_HTML)
     public
     @ResponseBody
@@ -71,7 +71,7 @@ public class UserController extends ControllerBase {
         return response.toString();
     }
 
-    @Secured(UserAuthorities.ROLE_USER_DELETE)
+    @Secured(UserAuthorities.ROLE_USERS_DELETE)
     @RequestMapping(method = RequestMethod.DELETE)
     public
     @ResponseBody
