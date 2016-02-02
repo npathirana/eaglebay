@@ -16,6 +16,8 @@
             <concurrency-control max-sessions="5" expired-url="/e/auth/duplicateLogin"/>
         </session-management>
 
+		<intercept-url pattern="/e/seller" access="permitAll"/>
+
         <intercept-url pattern="/e/*" access="hasRole('ROLE_USER')"/>
         <intercept-url pattern="/e/main/*" access="hasRole('ROLE_USER')"/>
 

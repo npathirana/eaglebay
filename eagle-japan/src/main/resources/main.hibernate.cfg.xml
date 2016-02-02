@@ -6,8 +6,10 @@
 
 <hibernate-configuration>
 
-    <session-factory>
-
-    </session-factory>
+	<session-factory>
+		<mapping class="com.eagle.commons.domain.Seller" />
+		<mapping class="com.eagle.commons.domain.ContactInfo" />
+		<mapping class="com.eagle.commons.domain.Country" />
+	</session-factory>
 
 </hibernate-configuration>
