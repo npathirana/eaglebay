@@ -147,3 +147,50 @@ INSERT INTO `user_permission` (`user_id`, `permission_id`)
   FROM user_role ur, role_permission rp
   WHERE ur.role_id = rp.role_id;
 
+CREATE TABLE buyer
+(
+    user_id INT(11) PRIMARY KEY NOT NULL,
+    receive_news_letter TINYINT(1) NOT NULL,
+    contact_id INT(11),
+    CONSTRAINT fk_buyer_user FOREIGN KEY (user_id) REFERENCES user (id),
+    CONSTRAINT fk_contact_id FOREIGN KEY (contact_id) REFERENCES contact_info (id)
+);
+CREATE INDEX fk_contact_id_idx ON buyer (contact_id);
+CREATE TABLE corporate_buyer
+(
+    buyer_id INT(11) PRIMARY KEY NOT NULL,
+    company_name VARCHAR(50) NOT NULL,
+    company_type VARCHAR(45),
+    CONSTRAINT fk_buyer FOREIGN KEY (buyer_id) REFERENCES buyer (user_id)
+);
+CREATE TABLE country
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    abbreviation VARCHAR(45) NOT NULL
+);
+CREATE TABLE individual_buyer
+(
+    buyer_id INT(11) PRIMARY KEY NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    CONSTRAINT fk_buyer_individual_buyer FOREIGN KEY (buyer_id) REFERENCES buyer (user_id)
+);
+CREATE TABLE contact_info
+(
+    id INT(11) PRIMARY KEY NOT NULL,
+    address1 VARCHAR(100),
+    address2 VARCHAR(100),
+    city VARCHAR(100),
+    postal_code VARCHAR(10),
+    state_province VARCHAR(45),
+    country_id INT(11),
+    mobile VARCHAR(45),
+    phone VARCHAR(45),
+    fax VARCHAR(45),
+    hotline VARCHAR(45),
+    email VARCHAR(45),
+    website_url VARCHAR(45),
+    CONSTRAINT fk_contactInfo_country FOREIGN KEY (country_id) REFERENCES country (id)
+);
+CREATE INDEX fk_contactInfo_country_idx ON contact_info (country_id);

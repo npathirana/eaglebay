@@ -16,6 +16,7 @@ public class ModuleHomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String getHomePage() {
+
         return Constants.MODULE_NAMESPACE + "/home";
     }
 

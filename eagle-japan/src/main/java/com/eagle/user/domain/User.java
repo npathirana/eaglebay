@@ -18,6 +18,7 @@ import java.util.List;
         )
 
 })
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User extends EntityBase implements java.io.Serializable {
 
     @Column(name = "email")

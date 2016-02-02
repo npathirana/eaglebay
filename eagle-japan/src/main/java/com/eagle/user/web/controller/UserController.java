@@ -47,6 +47,7 @@ public class UserController extends ControllerBase {
     @Secured(UserAuthorities.ROLE_USERS_LIST)
     @RequestMapping(method = RequestMethod.GET, headers = REQUEST_HEADER_ACCEPT_HTML)
     public String list(Model model) {
+
         return Constants.JSP_PATH_USERS + "list";
     }
 
