@@ -81,6 +81,59 @@ CREATE TABLE user_verification (
   FOREIGN KEY (`verification_medium_id`) REFERENCES `verification_medium` (`id`)
 );
 
+CREATE TABLE `seller` (
+  `id` int(11) NOT NULL,
+  `is_exporter` bit(1) DEFAULT NULL,
+  `is_auction_agent` bit(1) DEFAULT NULL,
+  `biz_type` varchar(100) DEFAULT NULL,
+  `is_supplier` bit(1) DEFAULT NULL,
+  `is_distributor` bit(1) DEFAULT NULL,
+  `is_deals_car` bit(1) DEFAULT NULL,
+  `is_deals_machinery` bit(1) DEFAULT NULL,
+  `is_deals_spare_parts` bit(1) DEFAULT NULL,
+  `biz_name` varchar(100) DEFAULT NULL,
+  `biz_established_on` varchar(100) DEFAULT NULL,
+  `operational_country` varchar(100) DEFAULT NULL,
+  `currency_id` varchar(100) DEFAULT NULL,
+  `biz_reg_certificate_path` varchar(100) DEFAULT NULL,
+  `biz_police_certificate_path` varchar(100) DEFAULT NULL,
+  `biz_reg_card_path` varchar(100) DEFAULT NULL,
+  `letter_of_card_accepted` varchar(100) DEFAULT NULL,
+  `bank_transfer_accepted` varchar(100) DEFAULT NULL,
+  `about_company` varchar(100) DEFAULT NULL,
+  `notify_logins` varchar(100) DEFAULT NULL,
+  `biz_ContactInfo_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `contact_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `address1` varchar(100) DEFAULT NULL,
+  `address2` varchar(100) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `postal_code` varchar(45) DEFAULT NULL,
+  `state_province` varchar(45) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `mobile` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `fax` varchar(45) DEFAULT NULL,
+  `hotline` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `website_url` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `country` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `abbreviation` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+
+
+
 INSERT INTO `role` (`id`, `code`, `status`) VALUES (1, 'role.root', 1);
 INSERT INTO `role` (`id`, `code`, `status`) VALUES (2, 'role.seller', 1);
 INSERT INTO `role` (`id`, `code`, `status`) VALUES (3, 'role.buyer', 1);
