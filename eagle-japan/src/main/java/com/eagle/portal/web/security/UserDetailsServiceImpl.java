@@ -1,4 +1,4 @@
-package com.eagle.portal.web.main.security;
+package com.eagle.portal.web.security;
 
 import com.eagle.commons.exception.ServiceException;
 import com.eagle.commons.security.SecurityManager;

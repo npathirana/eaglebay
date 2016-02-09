@@ -1,4 +1,4 @@
-package com.eagle.portal.web.main.security;
+package com.eagle.portal.web.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;

@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eagle.portal.web.main.controller;
+package com.eagle.portal.web.controller;
 
 
 import org.slf4j.Logger;

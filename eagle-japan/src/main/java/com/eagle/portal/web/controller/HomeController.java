@@ -1,4 +1,4 @@
-package com.eagle.portal.web.main.controller;
+package com.eagle.portal.web.controller;
 
 import com.eagle.commons.web.util.Constants;
 import org.slf4j.Logger;

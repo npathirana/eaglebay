@@ -1,5 +1,5 @@
 
-package com.eagle.portal.web.main.config;
+package com.eagle.portal.web.config;
 
 import com.eagle.commons.security.Authorities;
 import com.eagle.commons.web.util.Constants;

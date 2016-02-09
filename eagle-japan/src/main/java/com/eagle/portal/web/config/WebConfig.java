@@ -1,5 +1,5 @@
 
-package com.eagle.portal.web.main.config;
+package com.eagle.portal.web.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
