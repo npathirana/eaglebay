@@ -1,11 +1,16 @@
-package com.eagle.commons.dao.impl;
+package com.eagle.portal.web.main.dao.impl;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import com.eagle.commons.dao.SellerDao;
-import com.eagle.commons.domain.Seller;
+import com.eagle.commons.dao.impl.GenericDaoImpl;
+import com.eagle.portal.web.main.dao.SellerDao;
+import com.eagle.portal.web.main.domain.Seller;
+import com.eagle.user.domain.UserPermission;
 
 @Repository
 public class SellerDaoImpl extends GenericDaoImpl<Seller> implements SellerDao{
@@ -15,5 +20,5 @@ public class SellerDaoImpl extends GenericDaoImpl<Seller> implements SellerDao{
 	protected SellerDaoImpl() {
 		super(Seller.class);
 	}
-
+	
 }

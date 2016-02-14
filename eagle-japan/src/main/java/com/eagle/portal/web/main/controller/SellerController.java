@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.eagle.commons.domain.ContactInfo;
-import com.eagle.commons.domain.Country;
-import com.eagle.commons.domain.Seller;
 import com.eagle.commons.exception.ServiceException;
-import com.eagle.commons.service.ContactInfoService;
-import com.eagle.commons.service.CountryService;
-import com.eagle.commons.service.SellerService;
 import com.eagle.commons.util.PasswordParser;
 import com.eagle.commons.web.controller.ControllerBase;
 import com.eagle.commons.web.controller.json.PostResponse;
+import com.eagle.portal.web.main.domain.ContactInfo;
+import com.eagle.portal.web.main.domain.Country;
+import com.eagle.portal.web.main.domain.Seller;
 import com.eagle.portal.web.main.dto.SellerDto;
+import com.eagle.portal.web.main.service.ContactInfoService;
+import com.eagle.portal.web.main.service.CountryService;
+import com.eagle.portal.web.main.service.SellerService;
 
 @Controller
 @RequestMapping("/seller")
@@ -117,12 +117,13 @@ public class SellerController extends ControllerBase{
         
         try{
         	
-        	countryService.save(country);
+        	//countryService.save(country);
+        	//contactInfo.setCountry(country);
+        	
+        	//contactInfoService.save(contactInfo);
+        	//seller.setContactInfo(contactInfo);
         	contactInfo.setCountry(country);
-        	
-        	contactInfoService.save(contactInfo);
         	seller.setContactInfo(contactInfo);
-        	
         	sellerService.save(seller);
         
         }catch(ServiceException e){

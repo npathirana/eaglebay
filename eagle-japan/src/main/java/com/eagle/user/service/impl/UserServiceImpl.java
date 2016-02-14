@@ -101,7 +101,6 @@ public class UserServiceImpl extends GenericServiceImpl<User> implements UserSer
 
         try {
             userDao.add(user);
-            //do other sub objects related things here..
             return user;
         } catch (DataAccessException e) {
             throw translateException(e);

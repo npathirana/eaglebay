@@ -1,4 +1,4 @@
-package com.eagle.commons.service.impl;
+package com.eagle.portal.web.main.service.impl;
 
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,17 +6,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eagle.commons.dao.ContactInfoDao;
-import com.eagle.commons.dao.CountryDao;
-import com.eagle.commons.dao.SellerDao;
-import com.eagle.commons.domain.ContactInfo;
-import com.eagle.commons.domain.Country;
-import com.eagle.commons.domain.Seller;
 import com.eagle.commons.exception.DataAccessException;
 import com.eagle.commons.exception.ServiceException;
-import com.eagle.commons.service.ContactInfoService;
-import com.eagle.commons.service.CountryService;
-import com.eagle.commons.service.SellerService;
+import com.eagle.commons.service.impl.GenericServiceImpl;
+import com.eagle.portal.web.main.dao.ContactInfoDao;
+import com.eagle.portal.web.main.dao.CountryDao;
+import com.eagle.portal.web.main.dao.SellerDao;
+import com.eagle.portal.web.main.domain.ContactInfo;
+import com.eagle.portal.web.main.domain.Country;
+import com.eagle.portal.web.main.domain.Seller;
+import com.eagle.portal.web.main.service.ContactInfoService;
+import com.eagle.portal.web.main.service.CountryService;
+import com.eagle.portal.web.main.service.SellerService;
 
 @Service
 @Transactional(value = "transactionManager", readOnly = true, propagation = Propagation.REQUIRED)

@@ -6,10 +6,19 @@ import com.eagle.commons.domain.EntityBase;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "role_permission", catalog = "eagle")
+@NamedQueries({
+    @NamedQuery(
+            name = "RolePermission.findByRoleId",
+            query = "from RolePermission rp  where rp.role.id = :roleId"
+    )
+
+})
 public class RolePermission extends EntityBase implements java.io.Serializable {
 
     @ManyToOne

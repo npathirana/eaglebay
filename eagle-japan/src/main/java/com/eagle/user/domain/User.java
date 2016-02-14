@@ -6,6 +6,8 @@ import com.eagle.commons.domain.EntityBase;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -47,10 +49,10 @@ public class User extends EntityBase implements java.io.Serializable {
     private Short status;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserRole> roleList;
+    private List<UserRole> roleList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserPermission> permissionList;
+    private List<UserPermission> permissionList = new ArrayList<>();;
 
     public String getEmail() {
         return email;

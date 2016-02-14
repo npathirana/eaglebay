@@ -1,31 +1,36 @@
-package com.eagle.commons.service.impl;
+package com.eagle.portal.web.main.service.impl;
 
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import com.eagle.commons.dao.SellerDao;
-import com.eagle.commons.domain.Seller;
+
 import com.eagle.commons.exception.DataAccessException;
 import com.eagle.commons.exception.ServiceException;
-import com.eagle.commons.service.SellerService;
+import com.eagle.commons.service.impl.GenericServiceImpl;
+import com.eagle.portal.web.main.dao.ContactInfoDao;
+import com.eagle.portal.web.main.dao.SellerDao;
+import com.eagle.portal.web.main.domain.ContactInfo;
+import com.eagle.portal.web.main.domain.Seller;
+import com.eagle.portal.web.main.service.ContactInfoService;
+import com.eagle.portal.web.main.service.SellerService;
 
 @Service
 @Transactional(value = "transactionManager", readOnly = true, propagation = Propagation.REQUIRED)
-public class SellerServiceImpl extends GenericServiceImpl<Seller> implements SellerService{
+public class ContactInfoServiceImpl extends GenericServiceImpl<ContactInfo> implements ContactInfoService{
 
 	@Autowired
-	private SellerDao sellerDao;
+	private ContactInfoDao contactInfoDao;
 	
 	@PostConstruct
     void init() {
-        init(Seller.class, sellerDao);
+        init(ContactInfo.class, contactInfoDao);
     }
 	
 	@Override
 	@Transactional(value = "transactionManager", readOnly = false, rollbackFor = ServiceException.class)
-    public Seller save(Seller obj) throws ServiceException {
+    public ContactInfo save(ContactInfo obj) throws ServiceException {
 
         if (obj != null) {
             if (obj.getId() == null) {
@@ -39,24 +44,23 @@ public class SellerServiceImpl extends GenericServiceImpl<Seller> implements Sel
         return obj;
     }
 	
-	public Seller add(Seller seller) throws ServiceException {
-        validateConstraints(seller);
+	public ContactInfo add(ContactInfo contactInfo) throws ServiceException {
+        validateConstraints(contactInfo);
 
         try {
-        	sellerDao.add(seller);
+        	contactInfoDao.add(contactInfo);
             //do other sub objects related things here..
-            return seller;
+            return contactInfo;
         } catch (DataAccessException e) {
             throw translateException(e);
         }
     }
 
-    public Seller edit(Seller seller) throws ServiceException {
+    public ContactInfo edit(ContactInfo contactInfo) throws ServiceException {
 
         try {
-            sellerDao.modify(seller);
-            //do other sub objects related things here..
-            return seller;
+        	contactInfoDao.modify(contactInfo);
+            return contactInfo;
         } catch (DataAccessException e) {
             throw translateException(e);
         }

@@ -7,9 +7,9 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<mapping class="com.eagle.commons.domain.Seller" />
-		<mapping class="com.eagle.commons.domain.ContactInfo" />
-		<mapping class="com.eagle.commons.domain.Country" />
+		<mapping class="com.eagle.portal.web.main.domain.Seller" />
+		<mapping class="com.eagle.portal.web.main.domain.ContactInfo" />
+		<mapping class="com.eagle.portal.web.main.domain.Country" />
 	</session-factory>
 
 </hibernate-configuration>

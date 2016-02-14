@@ -12,6 +12,7 @@
         <mapping class="com.eagle.user.domain.User"/>
         <mapping class="com.eagle.user.domain.UserRole"/>
         <mapping class="com.eagle.user.domain.UserPermission"/>
+        <mapping class="com.eagle.user.domain.RolePermission"/>
     </session-factory>
 
 </hibernate-configuration>

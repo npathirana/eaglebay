@@ -1,4 +1,4 @@
-package com.eagle.commons.domain;
+package com.eagle.portal.web.main.domain;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

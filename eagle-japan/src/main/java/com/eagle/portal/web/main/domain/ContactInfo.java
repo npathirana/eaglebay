@@ -1,4 +1,4 @@
-package com.eagle.commons.domain;
+package com.eagle.portal.web.main.domain;
 
 import java.util.HashSet;
 import java.util.Set;
