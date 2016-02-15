@@ -6,8 +6,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.eagle.portal.web.main.domain.Seller;
-import com.eagle.portal.web.main.dto.SellerDto;
+import com.eagle.portal.web.domain.Seller;
+import com.eagle.portal.web.dto.SellerDto;
 
 /**
  * 

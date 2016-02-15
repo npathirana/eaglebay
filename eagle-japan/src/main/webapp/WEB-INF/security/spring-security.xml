@@ -44,7 +44,7 @@
     </http>
 
     <beans:bean id="authenticationSuccessHandler"
-                class="com.eagle.portal.web.main.security.LoginSuccessHandler">
+                class="com.eagle.portal.web.security.LoginSuccessHandler">
         <beans:property name="alwaysUseDefaultTargetUrl" value="true"/>
     </beans:bean>
 
@@ -64,7 +64,7 @@
 
     <!-- A custom service where Spring will retrieve users and their corresponding access levels  -->
     <beans:bean id="customUserDetailsService"
-                class="com.eagle.portal.web.main.security.UserDetailsServiceImpl"/>
+                class="com.eagle.portal.web.security.UserDetailsServiceImpl"/>
 
     <beans:bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <beans:property name="targetClass">
