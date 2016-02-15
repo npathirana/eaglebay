@@ -15,6 +15,29 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/app-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/user-module-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/security/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/module-config.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="main.hibernate.cfg.xml" />
+          <unit-entry name="sessionFactory" value="dataSource" />
+          <unit-entry name="user.hibernate.cfg.xml" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/main.hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/user.hibernate.cfg.xml" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
