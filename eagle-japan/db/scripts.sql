@@ -194,3 +194,76 @@ CREATE TABLE contact_info
     CONSTRAINT fk_contactInfo_country FOREIGN KEY (country_id) REFERENCES country (id)
 );
 CREATE INDEX fk_contactInfo_country_idx ON contact_info (country_id);
+#Seller table
+CREATE TABLE `seller` (
+  `id` int(11) NOT NULL,
+  `is_exporter` bit(1) DEFAULT NULL,
+  `is_auction_agent` bit(1) DEFAULT NULL,
+  `biz_type` varchar(100) DEFAULT NULL,
+  `is_supplier` bit(1) DEFAULT NULL,
+  `is_distributor` bit(1) DEFAULT NULL,
+  `is_deals_car` bit(1) DEFAULT NULL,
+  `is_deals_machinery` bit(1) DEFAULT NULL,
+  `is_deals_spare_parts` bit(1) DEFAULT NULL,
+  `biz_name` varchar(100) DEFAULT NULL,
+  `biz_established_on` varchar(100) DEFAULT NULL,
+  `operational_country` varchar(100) DEFAULT NULL,
+  `currency_id` varchar(100) DEFAULT NULL,
+  `biz_reg_certificate_path` varchar(100) DEFAULT NULL,
+  `biz_police_certificate_path` varchar(100) DEFAULT NULL,
+  `biz_reg_card_path` varchar(100) DEFAULT NULL,
+  `letter_of_card_accepted` varchar(100) DEFAULT NULL,
+  `bank_transfer_accepted` varchar(100) DEFAULT NULL,
+  `about_company` varchar(100) DEFAULT NULL,
+  `notify_logins` varchar(100) DEFAULT NULL,
+  `biz_ContactInfo_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+#Vehicle and related tables
+CREATE TABLE eagle.VehicleMake
+(
+  id INT PRIMARY KEY,
+  name VARCHAR(100),
+  country_id INT,
+  is_machinery TINYINT(1),
+  CONSTRAINT VehicleMake___country_fk FOREIGN KEY (country_id) REFERENCES country (id)
+);
+CREATE TABLE eagle.vehicle_model
+(
+  id INT PRIMARY KEY,
+  name VARCHAR(100),
+  vehicle_make_id INT,
+  CONSTRAINT vehicle_model___vehicle_make_id_fk FOREIGN KEY (vehicle_make_id) REFERENCES vehiclemake (id)
+);
+CREATE TABLE eagle.vehicle
+(
+  id INT PRIMARY KEY,
+  seller_id INT,
+  model_id INT,
+  body_type VARCHAR(100),
+  grade VARCHAR(100),
+  transmission VARCHAR(100),
+  drive_type VARCHAR(100),
+  steering VARCHAR(100),
+  fuel VARCHAR(100),
+  manuf_year INT,
+  manuf_month INT,
+  registration_date DATE,
+  mileage INT,
+  displacement VARCHAR(100),
+  price FLOAT,
+  stock_no INT,
+  stock_location VARCHAR(100),
+  vin_chassis_no VARCHAR(100),
+  is_left_drive TINYINT(1),
+  doors VARCHAR(100),
+  interior_color VARCHAR(50),
+  exterior_color VARCHAR(50),
+  `keys` VARCHAR(50),
+  comments VARCHAR(2000),
+  location_id INT,
+  fob_price FLOAT,
+  in_stock TINYINT(1),
+  CONSTRAINT vehicle___seller_id_fk FOREIGN KEY (seller_id) REFERENCES seller (id),
+  CONSTRAINT vehicle___model_id_fk FOREIGN KEY (model_id) REFERENCES vehicle_model (id)
+);
