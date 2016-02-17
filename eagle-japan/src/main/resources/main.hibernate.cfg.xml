@@ -10,6 +10,9 @@
 		<mapping class="com.eagle.portal.web.domain.Seller" />
 		<mapping class="com.eagle.portal.web.domain.ContactInfo" />
 		<mapping class="com.eagle.portal.web.domain.Country" />
+		<mapping class="com.eagle.portal.web.domain.VehicleMake" />
+		<mapping class="com.eagle.portal.web.domain.VehicleModel" />
+		<mapping class="com.eagle.portal.web.domain.Vehicle" />
 	</session-factory>
 
 </hibernate-configuration>

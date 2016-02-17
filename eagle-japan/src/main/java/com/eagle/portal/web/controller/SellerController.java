@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.eagle.commons.exception.ServiceException;
 import com.eagle.commons.util.PasswordParser;
 import com.eagle.commons.web.controller.ControllerBase;
@@ -19,12 +18,10 @@ import com.eagle.portal.web.domain.ContactInfo;
 import com.eagle.portal.web.domain.Country;
 import com.eagle.portal.web.domain.Seller;
 import com.eagle.portal.web.dto.SellerDto;
-import com.eagle.portal.web.service.ContactInfoService;
-import com.eagle.portal.web.service.CountryService;
 import com.eagle.portal.web.service.SellerService;
 
 @Controller
-@RequestMapping("/seller")
+@RequestMapping("/sellers")
 public class SellerController extends ControllerBase{
 
 	protected static Logger logger = LoggerFactory.getLogger(SellerController.class);

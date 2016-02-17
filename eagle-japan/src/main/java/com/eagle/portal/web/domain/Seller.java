@@ -1,15 +1,17 @@
 package com.eagle.portal.web.domain;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
@@ -93,8 +95,11 @@ public class Seller extends User{
 
 	@ManyToOne
 	@JoinColumn(name="biz_ContactInfo_id",unique=true)
-	//@NotFound(action=NotFoundAction.IGNORE)
+	@NotFound(action=NotFoundAction.EXCEPTION)
 	private ContactInfo contactInfo;
+	
+	@OneToMany(mappedBy="seller",cascade=CascadeType.PERSIST)
+	private Set<Vehicle> vehicles = new HashSet<Vehicle>();
 	
 	public Boolean getIsExporter() {
 		return isExporter;
@@ -255,6 +260,13 @@ public class Seller extends User{
 	public void setContactInfo(ContactInfo contactInfo) {
 		this.contactInfo = contactInfo;
 	}
-	
+
+	public Set<Vehicle> getVehicles() {
+		return vehicles;
+	}
+
+	public void setVehicles(Set<Vehicle> vehicles) {
+		this.vehicles = vehicles;
+	}
 	
 }

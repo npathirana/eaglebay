@@ -2,14 +2,12 @@ package com.eagle.portal.web.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.eagle.commons.exception.DataAccessException;
 import com.eagle.commons.exception.ServiceException;
 import com.eagle.commons.service.impl.GenericServiceImpl;
@@ -19,10 +17,8 @@ import com.eagle.portal.web.dao.SellerDao;
 import com.eagle.portal.web.domain.ContactInfo;
 import com.eagle.portal.web.domain.Country;
 import com.eagle.portal.web.domain.Seller;
-import com.eagle.portal.web.service.ContactInfoService;
 import com.eagle.portal.web.service.SellerService;
 import com.eagle.user.dao.RolePermissionDao;
-import com.eagle.user.dao.UserDao;
 import com.eagle.user.domain.Permission;
 import com.eagle.user.domain.Role;
 import com.eagle.user.domain.RolePermission;
@@ -32,9 +28,6 @@ import com.eagle.user.domain.UserRole;
 @Service
 @Transactional(value = "transactionManager", readOnly = true, propagation = Propagation.REQUIRED)
 public class SellerServiceImpl extends GenericServiceImpl<Seller>implements SellerService {
-
-	@Autowired
-	private UserDao userDao;
 	
 	@Autowired
 	private SellerDao sellerDao;

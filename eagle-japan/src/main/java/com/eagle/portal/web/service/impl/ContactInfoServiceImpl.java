@@ -5,16 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.eagle.commons.exception.DataAccessException;
 import com.eagle.commons.exception.ServiceException;
 import com.eagle.commons.service.impl.GenericServiceImpl;
 import com.eagle.portal.web.dao.ContactInfoDao;
-import com.eagle.portal.web.dao.SellerDao;
 import com.eagle.portal.web.domain.ContactInfo;
-import com.eagle.portal.web.domain.Seller;
 import com.eagle.portal.web.service.ContactInfoService;
-import com.eagle.portal.web.service.SellerService;
 
 @Service
 @Transactional(value = "transactionManager", readOnly = true, propagation = Propagation.REQUIRED)

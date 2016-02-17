@@ -9,15 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.eagle.commons.exception.DataAccessException;
 import com.eagle.commons.exception.ServiceException;
 import com.eagle.commons.service.impl.GenericServiceImpl;
-import com.eagle.portal.web.dao.ContactInfoDao;
 import com.eagle.portal.web.dao.CountryDao;
-import com.eagle.portal.web.dao.SellerDao;
-import com.eagle.portal.web.domain.ContactInfo;
 import com.eagle.portal.web.domain.Country;
-import com.eagle.portal.web.domain.Seller;
-import com.eagle.portal.web.service.ContactInfoService;
 import com.eagle.portal.web.service.CountryService;
-import com.eagle.portal.web.service.SellerService;
 
 @Service
 @Transactional(value = "transactionManager", readOnly = true, propagation = Propagation.REQUIRED)

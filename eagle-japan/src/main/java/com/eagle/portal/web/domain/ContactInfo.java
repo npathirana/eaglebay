@@ -2,31 +2,23 @@ package com.eagle.portal.web.domain;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
+import com.eagle.commons.domain.EntityBase;
 
 @Entity
 @Table(name = "contact_info", catalog = "eagle")
-public class ContactInfo {
+public class ContactInfo extends EntityBase{
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
+	private static final long serialVersionUID = -8148423819210193504L;
+
 	private String address1;
 	
 	private String address2;
@@ -59,14 +51,6 @@ public class ContactInfo {
 
 	@OneToMany(mappedBy="contactInfo",cascade=CascadeType.PERSIST)
 	private Set<Seller> sellers = new HashSet<Seller>();
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getAddress1() {
 		return address1;

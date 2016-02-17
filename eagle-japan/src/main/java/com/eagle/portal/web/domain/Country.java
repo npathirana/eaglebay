@@ -2,38 +2,25 @@ package com.eagle.portal.web.domain;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.eagle.commons.domain.EntityBase;
+
 @Entity
 @Table(name = "country", catalog = "eagle")
-public class Country {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+public class Country extends EntityBase{
 	
+	private static final long serialVersionUID = -6572177230044482259L;
+
 	private String name;
 	
 	@OneToMany(mappedBy="country",cascade=CascadeType.PERSIST)
 	private Set<ContactInfo> contactInfos = new HashSet<ContactInfo>();
 	
 	private String abbreviation;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;

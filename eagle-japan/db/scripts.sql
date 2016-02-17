@@ -131,6 +131,63 @@ CREATE TABLE `seller` (
   PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `vehiclemake` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `is_machinery` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `VehicleMake___country_fk` (`country_id`),
+  CONSTRAINT `VehicleMake___country_fk` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`)
+);
+
+CREATE TABLE `vehicle_model` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `vehicle_make_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `vehicle_model___vehicle_make_id_fk` (`vehicle_make_id`),
+  CONSTRAINT `vehicle_model___vehicle_make_id_fk` FOREIGN KEY (`vehicle_make_id`) REFERENCES `vehiclemake` (`id`)
+);
+
+CREATE TABLE `vehicle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `seller_id` int(11) DEFAULT NULL,
+  `model_id` int(11) DEFAULT NULL,
+  `body_type` varchar(100) DEFAULT NULL,
+  `grade` varchar(100) DEFAULT NULL,
+  `transmission` varchar(100) DEFAULT NULL,
+  `drive_type` varchar(100) DEFAULT NULL,
+  `steering` varchar(100) DEFAULT NULL,
+  `fuel` varchar(100) DEFAULT NULL,
+  `manuf_year` int(11) DEFAULT NULL,
+  `manuf_month` int(11) DEFAULT NULL,
+  `registration_date` date DEFAULT NULL,
+  `mileage` int(11) DEFAULT NULL,
+  `displacement` varchar(100) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `stock_no` int(11) DEFAULT NULL,
+  `stock_location` varchar(100) DEFAULT NULL,
+  `vin_chassis_no` varchar(100) DEFAULT NULL,
+  `is_left_drive` tinyint(1) DEFAULT NULL,
+  `doors` varchar(100) DEFAULT NULL,
+  `interior_color` varchar(50) DEFAULT NULL,
+  `exterior_color` varchar(50) DEFAULT NULL,
+  `keys` varchar(50) DEFAULT NULL,
+  `comments` varchar(2000) DEFAULT NULL,
+  `location_id` int(11) DEFAULT NULL,
+  `fob_price` float DEFAULT NULL,
+  `in_stock` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `vehicle___seller_id_fk` (`seller_id`),
+  KEY `vehicle___model_id_fk` (`model_id`),
+  CONSTRAINT `vehicle___model_id_fk` FOREIGN KEY (`model_id`) REFERENCES `vehicle_model` (`id`),
+  CONSTRAINT `vehicle___seller_id_fk` FOREIGN KEY (`seller_id`) REFERENCES `seller` (`id`)
+);
+
+
+
+
 INSERT INTO `role` (`id`, `code`, `status`) VALUES (1, 'role.root', 1);
 INSERT INTO `role` (`id`, `code`, `status`) VALUES (2, 'role.seller', 1);
 INSERT INTO `role` (`id`, `code`, `status`) VALUES (3, 'role.buyer', 1);
